@@ -1,4 +1,0 @@
-package src.veiculos;
-
-public class Moto extends Veiculo{
-}
