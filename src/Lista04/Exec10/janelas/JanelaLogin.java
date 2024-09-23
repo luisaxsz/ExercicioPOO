@@ -32,6 +32,7 @@ public class JanelaLogin extends JFrame {
     private JPasswordField campoSenha = new JPasswordField(20);
     
     private JButton botaoOK = new JButton("Entrar");
+    private JButton limpar = new JButton("Limpar");
 
     public JanelaLogin() {
         
@@ -45,6 +46,7 @@ public class JanelaLogin extends JFrame {
         campoEmail.setAlignmentX(CENTER_ALIGNMENT);
         campoSenha.setAlignmentX(CENTER_ALIGNMENT);
         botaoOK.setAlignmentX(CENTER_ALIGNMENT);
+        limpar.setAlignmentX(CENTER_ALIGNMENT);
         
         botaoOK.addActionListener(new ActionListener() {
             @Override
@@ -62,6 +64,13 @@ public class JanelaLogin extends JFrame {
                 
             }
         });
+
+        limpar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent ae) {
+                limparCampos();
+            }
+        });
         
         painel.add(txtLogin);
         painel.add(txtEmail);
@@ -69,6 +78,7 @@ public class JanelaLogin extends JFrame {
         painel.add(txtSenha);
         painel.add(campoSenha);
         painel.add(botaoOK);
+        painel.add(limpar);
         
         this.add(painel);
     }
